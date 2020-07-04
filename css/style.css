@@ -1,0 +1,340 @@
+
+/* Reset do CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #29282c;
+    background-position: left;
+    background-size: auto 100vh;
+    font-family: Arial;
+    height: 100vh;
+    font-size: 10px;
+    
+  }
+  /* se a tela tiver pelo menos 400px carregar estes estilos */
+  @media (min-width: 500px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+  /* Breakpoints */
+  @media (min-width: 700px) {
+    body {
+      font-size: 18px;
+    }
+  }
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+  .menu {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+ 
+  }
+  
+  .menu li {
+    list-style: none;
+    
+  }
+
+  .menu a {
+    display: block;
+    padding: 35px 20px;
+    transition: background-color 1s, color 1s;
+    
+    }
+  .menu a:active,
+  .menu a:hover {
+    color:  rgb(25, 140, 194);
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  
+ /* Estado inicial do title e sub-title */
+ .titulo {
+   transform: scale(0.2) translateY(50vh);
+   opacity: 0;
+
+   animation: linear 2s animacaoTítulo forwards; 
+
+ }
+ 
+ /* Animação do title e sub-title */
+ @keyframes animacaoTítulo {
+   
+   100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+   }
+ }
+
+ 
+
+ 
+
+  .site-subtitle, 
+  .site-title {
+    color: rgb(248, 248, 248);
+
+    
+  }
+
+
+  .site-title {
+    font-size: 4em;
+    font-family: 'Courgette', cursive;
+    text-align: left;
+   /* white-space: nowrap;
+    overflow: hidden;*/
+  
+
+  }
+
+  
+  .site-subtitle {
+    font-style: italic;
+    font-family: 'Courgette', cursive;
+    color: rgb(25, 140, 194);
+    
+  }
+
+
+    /*.site-title  {
+      animation: steps(40) infinite normal, 
+      typing 3s  steps(40) 0s normal;
+    }
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 8em;
+      }
+    }*/
+
+ 
+ 
+
+  
+  .formacao,
+  .sobre,
+  .contato,
+  .portfolio {
+    padding: 2em;
+    min-height: 100vh;
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  .sobre h2 ,
+  .contato h2,
+  .portfolio h2,
+  .formacao h2  {
+    font-family: 'Courgette', cursive;
+    margin-bottom: 1.4em;
+    font-size: 2em;
+    color: white;
+    padding-left: .5em;
+    
+  }
+
+  .sobre p {
+    color: whitesmoke;
+    text-indent: 1.5em;
+    margin-bottom: 1.4em;
+    text-align: justify;
+
+  }
+
+  .formacao p {
+    color: whitesmoke;
+    margin-bottom: 1.4em;
+    text-align: justify;
+    
+  }
+
+  .formacao a {
+    color:  rgb(25, 140, 194);
+    text-decoration: underline;
+  }
+
+  .formacao a:hover {
+    background-color:  rgb(25, 140, 194);
+    color: white;
+    text-decoration: underline;
+  }
+
+  .sobre  a {
+    color:  rgb(25, 140, 194);
+    text-decoration: underline;
+
+  }
+
+  .sobre a:hover {
+    background-color:  rgb(25, 140, 194);
+    color: white;
+    text-decoration: underline;
+  }
+
+  .sobre .avatar {
+    float: left;
+    margin-left: 2em;
+   
+   
+    
+  }
+
+  .sobre .avatar img {
+    border-radius: 50%;
+    margin-right: 25px;
+    
+  }
+
+
+  .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    
+    
+  }
+
+  @media (min-width: 330px) {
+    .portfolio .grid {
+      grid-template-columns: 240px;
+      height: calc(200vh - 4em - 48px);
+    }
+  }
+
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+      height: calc(100vh - 4em - 48px);
+      
+      
+    }
+  }
+
+
+  @media (min-width: 880px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px  240px;
+      /*align-content: center;
+      justify-content: center;*/
+      height: calc(100vh - 4em - 48px);
+      
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px  240px 240px;
+      /*align-content: center;*/
+      justify-content: center;
+      height: calc(100vh - 8em - 48px);
+    }
+  }
+  .portfolio figure {
+    text-align: center;
+  }
+
+  .portfolio figcaption {
+    color: white;
+  }
+
+  
+
+  .img-portfolio {
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 20px;
+    transition: transform 500ms;
+
+  }
+
+  /*.img-portfolio:hover {
+    transform: scale(1.2) ;
+  }*/
+
+
+  .flip-card {
+    perspective: 500px;
+  }
+
+
+  .card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+  }
+
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, 
+  .card-back {
+    left: 0;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+  }
+
+  .card-back {
+    background-color: white;
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+  }
+
+ 
+  
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a {
+    color: whitesmoke;
+    font-size: 4em;
+    transition: text-shadow 1s;
+  }
+  .contato a:active,
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255, .5);
+  }
+
+  
+ 
+    
